@@ -10,6 +10,11 @@
     font-family: "Playfair Display", serif;
 }
 
+::selection {
+    background-color: #4edea3;
+    color: #091225;
+}
+
 html {
     scroll-behavior: smooth;
 }
