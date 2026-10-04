@@ -1,0 +1,365 @@
+* {
+    border: none;
+    outline: none;
+
+    text-decoration: none;
+    list-style-type: none;
+
+    position: relative;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Playfair Display", serif;
+    overflow-x: hidden;
+}
+
+.des ,.speed , .live-bank, .dropdown,.converter,.amount-to-transfer{
+    border: 1px solid #b4b8b53e;
+}
+
+header {
+    border-bottom: 1px solid #3636366a;
+}
+
+.live {
+    width: 10px;
+    height: 10px;
+}
+
+
+header {
+    border-bottom: 1px solid rgba(218, 226, 253, 0.08);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+
+
+.des,
+.speed {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.des:hover,
+.speed:hover {
+    transform: translateY(-2px);
+    background-color: #2a3349;
+}
+
+
+.live {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(78, 222, 163, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(78, 222, 163, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(78, 222, 163, 0);
+    }
+}
+
+
+.settings,
+.account {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.settings:hover {
+    background-color: #4e5a70;
+    transform: translateY(-2px);
+}
+
+.account:hover {
+    transform: scale(1.08);
+    background-color: #303b52;
+}
+
+
+.main {
+    min-height: calc(100vh - 200px);
+}
+
+.about h1 {
+    transition: color 0.3s ease;
+}
+
+.about h1:hover {
+    color: #4edea3;
+}
+
+.live-bank {
+    transition: all 0.3s ease;
+}
+
+.live-bank:hover {
+    transform: translateY(-2px);
+    background-color: #2a3349;
+}
+
+input {
+    width: 200px;
+}
+
+
+.converter {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.converter:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+
+.amount-to-transfer,
+.amount-to-exchange {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.amount-to-transfer:hover,
+.amount-to-exchange:hover {
+    background-color: #091225;
+    transform: translateY(-2px);
+}
+
+
+
+.amount-to-transfer input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.amount-to-transfer input::placeholder {
+    color: #bbcabe;
+}
+
+.amount-to-transfer input:focus {
+    color: #4edea3;
+}
+
+
+
+.dropdown {
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover {
+    background-color: #303a50;
+    border-color: #4edea3;
+    transform: translateY(-1px);
+}
+
+.dropdown:focus {
+    border-color: #4edea3;
+    box-shadow: 0 0 0 3px rgba(78, 222, 163, 0.12);
+}
+
+
+
+.dropdown option {
+    background-color: #222a3d;
+    color: #dae2fd;
+}
+
+
+
+.converter > button {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.converter > button:hover {
+    background-color: #6af0b8;
+    transform: rotate(180deg) scale(1.08);
+    box-shadow: 0 0 20px rgba(78, 222, 163, 0.25);
+}
+
+.converter > button:active {
+    transform: rotate(180deg) scale(0.95);
+}
+
+@media (max-width: 1024px) {
+
+    header {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .converter {
+        width: min(90%, 650px) !important;
+    }
+
+    .about h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px !important;
+    }
+
+    .header .left {
+        gap: 10px;
+    }
+
+    .des,
+    .speed {
+        display: none;
+    }
+
+    .right {
+        gap: 8px !important;
+    }
+
+    .main {
+        min-height: calc(100vh - 70px);
+        padding: 20px 15px;
+    }
+
+    .about {
+        padding: 30px 0 !important;
+        text-align: center;
+    }
+
+    .about h1 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+    }
+
+    .about p br {
+        display: none;
+    }
+
+    .converter {
+        width: 100% !important;
+        padding: 12px !important;
+        border-radius: 22px;
+    }
+
+    .amount-to-transfer,
+    .amount-to-exchange {
+        padding: 18px !important;
+    }
+
+    .amount-to-transfer input {
+        width: 140px !important;
+        font-size: 2rem !important;
+    }
+
+    .amount-to-exchange p {
+        width: 140px !important;
+        font-size: 2rem !important;
+    }
+
+    .amount-to-transfer span,
+    .amount-to-exchange span {
+        font-size: 2.5rem;
+    }
+
+    .dropdown {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+    .logo h2 {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+
+    .settings,
+    .account {
+        padding: 7px !important;
+    }
+
+    .about {
+        padding: 20px 0 !important;
+    }
+
+    .about h1 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.85rem;
+    }
+
+    .live-bank {
+        font-size: 0.7rem;
+    }
+
+    .amount-to-transfer,
+    .amount-to-exchange {
+        padding: 15px !important;
+    }
+
+    .amount-to-transfer input,
+    .amount-to-exchange p {
+        width: 100px !important;
+        font-size: 1.6rem !important;
+    }
+
+    .amount-to-transfer span,
+    .amount-to-exchange span {
+        font-size: 2rem;
+    }
+
+    .dropdown {
+        max-width: 100px;
+        font-size: 0.75rem;
+        padding: 7px;
+    }
+}

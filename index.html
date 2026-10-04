@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/screen.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Flux FX - Money Converter</title>
+</head>
+<body class="w-screen w-dvh bg-[#0B1326]">
+    <header class="flex justify-between px-25 py-4 bg-[#0B1326]">
+        <div class="left flex gap-5 items-center">
+            <div class="logo flex gap-2 items-center">
+                <img src="assets/screen.png" width="30px">
+                <h2 class="text-[#DAE2FD] font-semibold text-xl">Flux FX</h2>
+            </div>
+            <div class="des flex items-center gap-2 bg-[#222A3D] p-2 text-[#BBCABF] rounded-3xl"><div class="live bg-[#4EDEA3] rounded-full"></div> ECB Reference Rates</div>
+        </div>
+        <div class="right flex gap-5 items-center">
+            <div class="speed flex items-center gap-2 bg-[#060E20] p-2 text-[#BBCABF] rounded-3xl"><div class="verify-icon"><i class="fa-regular fa-circle-check text-[#4EDEA3]"></i></div> Zero Retail Speed</div>
+            <div class="icons flex gap-2 items-center">
+                <div class="settings p-2 bg-[#171F33] rounded-lg"><i class="fa-solid fa-sliders text-[#BBCABF]"></i></div>
+                <div class="account  p-2 bg-[#222A3D] rounded-full "><i class="fa-solid fa-user text-[#4EDEA3]"></i></div>
+            </div>
+        </div>
+    </header>
+    <section class="main flex flex-col justify-center items-center mb-10">
+        <div class="about py-10 flex justify-center items-center flex-col gap-2 ">
+            <div class="live-bank flex items-center gap-2 bg-[#222A3D] text-[#4EDEA3] p-2 rounded-3xl text-sm"><div class="live bg-[#4EDEA3] rounded-full"></div> INTERBANK-MID-MARKET</div>
+            <h1 class="text-4xl font-bold text-[#DAE2FD] ">Convert Currencies</h1>
+            <p class="text-[#BBCABF] text-center text-lg">Real-time exchange rates powered by the European Central <br> Bank with guaranteed zero markup.</p>
+        </div>
+        <div class="converter p-4 bg-[#162334] w-xl rounded-3xl flex flex-col items-center gap-5 ">
+            <div class="amount-to-transfer flex flex-col gap-2 p-5 bg-[#060E20] rounded-3xl">
+                <h3 class="text-[#BBCABF] text-sm">Amount To Transfer</h3>
+                <div class="flex gap-2 justify-between items-center">
+                <div class="flex gap-2 items-center">
+                    <span class="text-5xl text-[#BBCABF] ">$</span>
+                    <input id="amount" class="text-4xl text-[#BBCABF]  p-3" type="text">
+                </div>
+                <select id="country" name="country" class="dropdown p-2 text-[#4EDEA3] bg-[#222A3D] rounded-2xl">
+            
+                </select>
+            </div>
+            </div>
+            <button class="bg-[#4EDEA3] p-2 rounded-xl text-[#000]"><i class="fa-solid fa-right-left"></i></button>
+            <div class="amount-to-exchange flex flex-col gap-2 p-5 bg-[#060E20] rounded-3xl">
+                <h3 class="text-[#BBCABF] text-sm">Amount To Exchange</h3>
+                <div class="flex gap-2 justify-between items-center">
+                <div class="flex gap-2 items-center">
+                    <span class="text-5xl text-[#BBCABF] ">$</span>
+                    <p id="result" class="text-4xl text-[#4EDEA3] p-3"></p>
+                </div>
+                <select id="country2" name="country" class="dropdown p-2 text-[#4EDEA3] bg-[#222A3D] rounded-2xl">
+                </select>
+            </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex flex-col md:flex-row py-5 px-5 md:px-10 lg:px-30 gap-4 md:gap-0 justify-between items-center text-center md:text-left bg-[#070F22]">
+    <p>
+        <strong class="text-[#DAE2FD]">Flux FX</strong>
+        <span class="text-[#BBCABF] text-sm">
+            © 2026 Developed by Assem Karam.
+        </span>
+    </p>
+    <nav>
+        <ul class="flex flex-wrap justify-center gap-4">
+            <li class="text-[#BBCABF]">
+                <span class="text-[#4EDEA3]">ECB DIRECT SYNCED</span>
+            </li>
+            <li class="text-[#BBCABF]">
+                <a href="#">Terms</a>
+            </li>
+            <li class="text-[#BBCABF]">
+                <a href="#">Disclosures</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
